@@ -1,5 +1,6 @@
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
 
 function Home() {
     return (
@@ -10,20 +11,25 @@ function Home() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    minHeight: "50vh",
-                    fontSize: "3vw",
+                    my: 20
                 }} >
                 <Toolbar />
-                <h1>Future Design</h1>
+                <Typography sx={{
+                    textAlign: "center",
+                    fontSize: "5vh",
+                    mr: 5,
+                }}>Future Design</Typography>
             </ Box>
             <Box sx={{
                 maxWidth: "70vw",
-                fontSize: "1.5vw",
-                my: -10
+                minWidth: "1.5vw",
             }}>
-                <h2>
+                <Typography sx={{
+                    textAlign: "center",
+                    fontSize: "3vh",
+                }}>
                     Diseñamos tu página web hecha a medida en las últimas tecnologías
-                </h2>
+                </Typography>
             </Box>
         </Box>)
 }

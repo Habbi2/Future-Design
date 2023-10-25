@@ -1,5 +1,6 @@
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
 
 function Quienes() {
     return (
@@ -10,26 +11,35 @@ function Quienes() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    minHeight: "50vh",
-                    fontSize: "3vw",
+                    my: 25
                 }} >
                 <Toolbar />
-                <h1>Contáctenos</h1>
+                <Typography sx={{
+                    textAlign: "center",
+                    fontSize: "4vh",
+                    mr: 5,
+                }}>Contáctenos</Typography>
             </ Box>
             <Box sx={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                minHeight: "50vh",
                 maxWidth: "70vw",
-                fontSize: "1.5vw",
-                my: -20
+
             }}>
-                <h2>
+                <Typography sx={{
+                    textAlign: "center",
+                    fontSize: "4vh",
+                }}>
                     Whatsapp: +05491130599215
-                </h2>
-                <h2>Mail: futuredesign413@gmail.com</h2>
+                </Typography>
+                <Typography sx={{
+                    textAlign: "center",
+                    fontSize: "4vh",
+                }}>
+                    Mail: futuredesign413@gmail.com
+                </Typography>
             </Box>
         </Box>)
 }
