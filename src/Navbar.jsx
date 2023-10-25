@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
@@ -44,7 +43,7 @@ function Navbar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              {item === "Home" ? <MenuItem component={Link} to="/">{item}</MenuItem> : <MenuItem component={Link} to={item}>{item}</MenuItem>}
             </ListItemButton>
           </ListItem>
         ))}
@@ -79,7 +78,7 @@ function Navbar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: '#fff', mr: 3 }}>
-                  {item === "Home" ? <MenuItem component={Link} to="/" sx={{ textDecoration: 'none' }}>{item}</MenuItem> : <MenuItem component={Link} to={item} sx={{ textDecoration: 'none' }}>{item}</MenuItem>}
+                  {item === "Home" ? <MenuItem component={Link} to="/">{item}</MenuItem> : <MenuItem component={Link} to={item}>{item}</MenuItem>}
                 </Button>
               ))}
             </Box>
