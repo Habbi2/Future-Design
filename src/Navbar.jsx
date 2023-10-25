@@ -43,7 +43,7 @@ function Navbar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              {item === "Home" ? <MenuItem component={Link} to="/">{item}</MenuItem> : <MenuItem component={Link} to={item}>{item}</MenuItem>}
+              <MenuItem component={Link} to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} sx={{ textDecoration: 'none' }}>{item}</MenuItem>
             </ListItemButton>
           </ListItem>
         ))}
@@ -78,7 +78,7 @@ function Navbar(props) {
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: '#fff', mr: 3 }}>
-                  {item === "Home" ? <MenuItem component={Link} to="/">{item}</MenuItem> : <MenuItem component={Link} to={item}>{item}</MenuItem>}
+                  <MenuItem component={Link} to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} sx={{ textDecoration: 'none' }}>{item}</MenuItem>
                 </Button>
               ))}
             </Box>
